@@ -11,36 +11,130 @@ This package is for developers who want to integrate Bittrex Exchange apis in th
 * npm i bittrex-js-client
 * make sure you have node installed on your machine
 
-#Examples
+### How do i get set up Key & Secret ? ###
+
+Check: https://github.com/tarun1475/Nodejs-Bittrex-Client/blob/master/constants.js
+
+# Examples #
+
+
+
+# getMarkets #
 
 ```
 var bittrex = require('bittrex-js-client');
-bittrex.options({
-  'key' : API_KEY,
-  'secret' : API_SECRET,
-});
+
 
 bittrex.getMarkets();
 
-
-//Result will be JSON object.
 ```
 
-#Cancel an Order
+# getCurrencies #
 
 ```
-
 var bittrex = require('bittrex-js-client');
-bittrex.options({
-  'key' : API_KEY,
-  'secret' : API_SECRET,
-});
-
-bittrex.cancel(uuid,options);
 
 
-//Result will be JSON object.
+bittrex.getCurrencies();
+
 ```
+
+# getTicker #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+
+// e.g BTC_LTC
+bittrex.getTicker(market);
+
+```
+
+# getMarketSummaries #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.getMarketSummaries();
+
+```
+
+# getMarketSummary #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.getMarketSummary(market);
+
+```
+
+# getOrderBook #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.getOrderBook(market, type);
+
+```
+
+# getMarketHistory #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.getMarketHistory(market);
+
+```
+
+
+### All Market Routes ###
+
+# buyLimit #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.buyLimit(market, quantity, rate);
+
+```
+
+# sellLimit #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.sellLimit(market,quantity,rate);
+
+```
+
+# cancel #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.cancel(uuid);
+
+```
+
+# getOpenOrders #
+
+```
+var bittrex = require('bittrex-js-client');
+
+
+bittrex.getOpenOrders();
+
+```
+
+
 
 ```
 For More info and code repo have a look at : https://github.com/tarun1475/Nodejs-Bittrex-Client

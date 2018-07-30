@@ -32,6 +32,14 @@ define(exports.baseUrl, "ACCOUNT"       , "https://bittrex.com/api/v1.1/account"
 
 
 /**
+ * Bittrex Key & Secret
+ */
+exports.auth = {};
+define(exports.auth, "KEY"       , API_KEY);
+define(exports.auth, "SECRET"     , API_SECRET);
+
+
+/**
  * Common response sent during database execution error
  * @type {{log: string, flag: number}}
  */
